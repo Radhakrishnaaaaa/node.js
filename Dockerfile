@@ -1,4 +1,4 @@
-FROM nodejs:latest
+FROM node:latest
 MAINTAINER "RADHAKRISHNA"
 RUN npm install
 WORKDIR /kittu

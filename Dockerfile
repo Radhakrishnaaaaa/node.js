@@ -1,5 +1,6 @@
 FROM node:latest
 MAINTAINER ADDRESS "RADHAKRISHNA"
+RUN npm install
 WORKDIR /kittu
 COPY package*.json ./kittu
 COPY . .

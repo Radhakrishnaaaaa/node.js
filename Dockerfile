@@ -1,6 +1,6 @@
 FROM node:latest
 MAINTAINER "RADHAKRISHNA"
-RUN npm install
+RUN /bin/sh -c npm install
 WORKDIR /kittu
 COPY package*.json ./kittu
 COPY . .

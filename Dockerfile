@@ -1,7 +1,7 @@
 FROM node:latest
 MAINTAINER "RADHAKRISHNA"
-RUN npm i
 WORKDIR /kittu
+RUN npm i
 COPY package*.json ./
 COPY . .
 CMD ["npm","start"]

@@ -1,8 +1,8 @@
 FROM node:latest
 MAINTAINER "RADHAKRISHNA"
-RUN npm i -g npm
+RUN npm i
 WORKDIR /kittu
-COPY package*.json ./kittu/
+COPY package*.json ./
 COPY . .
 CMD ["npm","start"]
 EXPOSE 5000

@@ -1,0 +1,37 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: krishna-deployment
+spec:
+ replicas: 2
+ strategy:
+    type: Recreate
+ selector:
+   matchLabels:
+     app: krishna
+ template:
+  metadata:
+   name: krishna
+   labels:
+     app: krishna
+  spec:
+    containers:
+    - name: krishna
+      image: radhakrishnabadugu94/nod:latest
+      imagePullPolicy: Always
+      ports:
+      - containerPort: 5000
+---
+apiVersion: v1
+kind: Service
+metadata:
+ name: service1
+spec:
+  type: NodePort
+  selector:
+   app: krishna
+  ports:
+   - port: 5000
+     targetPort: 5000
+...
